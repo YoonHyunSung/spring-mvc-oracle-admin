@@ -8,8 +8,10 @@ import lombok.Data;
 public class CustomerDto {
 	private int custId;
 	private String custName;
-	private int address;
-	private int phone;
+	private String address;
+	private String phone;
+	
+	
 	public int getCustId() {
 		return custId;
 	}
@@ -22,16 +24,22 @@ public class CustomerDto {
 	public void setCustName(String custName) {
 		this.custName = custName;
 	}
-	public int getAddress() {
+	public String getAddress() {
 		return address;
 	}
-	public void setAddress(int address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	@Override
+	public String toString() {
+		return "CustomerDto [custId=" + custId + ", custName=" + custName + ", address=" + address + ", phone=" + phone
+				+ "]";
+	}
+	
 }

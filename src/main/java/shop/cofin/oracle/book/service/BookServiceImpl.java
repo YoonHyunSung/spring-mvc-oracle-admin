@@ -11,31 +11,56 @@ import shop.cofin.oracle.mappers.BookMapper;
 @Service
 public class BookServiceImpl implements BookService {
 
-	@Autowired BookMapper bookMapper;
-	
+	@Autowired BookMapper mapper;
+
+	@Override
+	public void save(BookDto t) {
+		mapper.save(t);
+		
+	}
+
+	@Override
+	public BookDto findById(Integer id) {
+		
+		BookDto book = mapper.findById(id);
+		return book;
+	}
+
 	@Override
 	public List<BookDto> findAll() {
-		return bookMapper.findAll();
+		
+		return mapper.findAll();
 	}
 
 	@Override
-	public BookDto findById(int bookId) {
-		return bookMapper.findById(bookId);
+	public void update(BookDto t) {
+		mapper.update(t);
 	}
 
 	@Override
-	public List<BookDto> findByPubId(int pubId) {
-		return bookMapper.findByPubId(pubId);
+	public void delete(Integer id) {
+		mapper.delete(id);
 	}
 
 	@Override
-	public List<BookDto> findByBookTitle(String value) {
-		return bookMapper.findByBookTitle(value);
+	public List<BookDto> findByBookTitle(String bookTitle) {
+		
+		return mapper.findByBookTitle(bookTitle);
 	}
 
 	@Override
 	public List<BookDto> findByPrice(int price) {
-		return bookMapper.findByPrice(price);
+		
+		return mapper.findByPrice(price);
 	}
 
+	@Override
+	public List<BookDto> findByPubId(int pubId) {
+		// TODO Auto-generated method stub
+		return mapper.findByPubId(pubId);
+	}
+	
+	
+	
+	
 }
