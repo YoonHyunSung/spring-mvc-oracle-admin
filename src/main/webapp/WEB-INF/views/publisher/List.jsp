@@ -8,7 +8,7 @@
 
 <h2>고객 목록</h2>
 
-<form action="${contextPath}/publishers/join" method="post">  
+<form action="${contextPath}/publishers/list" method="post">  
 
   <div class="container">
     <label for="custId"><b>custId</b></label>

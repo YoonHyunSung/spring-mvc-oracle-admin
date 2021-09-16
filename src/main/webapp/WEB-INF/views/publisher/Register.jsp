@@ -8,7 +8,7 @@
 
 <h2>고객 등록</h2>
 
-<form action="${contextPath}/publishers/join" method="post">  
+<form action="${contextPath}/publishers/save" method="post">  
 
   <div class="container">
     <label for="custId"><b>custId</b></label>

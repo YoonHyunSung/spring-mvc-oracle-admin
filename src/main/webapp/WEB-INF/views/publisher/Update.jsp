@@ -8,7 +8,7 @@
 
 <h2>고객 수정</h2>
 
-<form action="${contextPath}/publishers/join" method="post">
+<form action="${contextPath}/publishers/update" method="post">
   
 
   <div class="container">
